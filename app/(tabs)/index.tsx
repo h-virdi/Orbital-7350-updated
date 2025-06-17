@@ -77,9 +77,9 @@ const Index = () => {
       {
         userInfo ? (
           <View>
+          <Button title='Get Current User' onPress = {getCurrentUser}/>
           <Text>{JSON.stringify(userInfo, null, 2)}</Text>
           <Button title='Sign out' onPress = {handleGoogleSignOut}/>
-          <Button title='Get Current User' onPress = {getCurrentUser}/>
           </View>
         ) : ( 
       <GoogleSigninButton
