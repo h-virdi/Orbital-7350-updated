@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		099142C2553F5EEC6DA04197 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = AF1CBA9765B7E630BF817397 /* PrivacyInfo.xcprivacy */; };
+		0F03671C409DD7F92E30BCF5 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D416F5D592A763A75A05DB9 /* ExpoModulesProvider.swift */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		22529FA98FAD6208805EFB26 /* libPods-SyncOurTrip20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33476DB5567F4566E4DFDDF1 /* libPods-SyncOurTrip20.a */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
-		68C362223A55FD357F792253 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9F7B90D8BB9584C195F305F4 /* PrivacyInfo.xcprivacy */; };
+		8DEEA2529D75A8A4DA15064B /* libPods-SyncOurTrip20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF370BBDEC2695C574F7963 /* libPods-SyncOurTrip20.a */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		D5B0800D80028949F81BF20F /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB501EF450B15C94D7A58C /* ExpoModulesProvider.swift */; };
 		F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11748412D0307B40044C1D9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,13 +20,13 @@
 		13B07F961A680F5B00A75B9A /* SyncOurTrip20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SyncOurTrip20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SyncOurTrip20/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SyncOurTrip20/Info.plist; sourceTree = "<group>"; };
-		1AAB501EF450B15C94D7A58C /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-SyncOurTrip20/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		33476DB5567F4566E4DFDDF1 /* libPods-SyncOurTrip20.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SyncOurTrip20.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A64B8E6B62D6368D13D353F /* Pods-SyncOurTrip20.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SyncOurTrip20.release.xcconfig"; path = "Target Support Files/Pods-SyncOurTrip20/Pods-SyncOurTrip20.release.xcconfig"; sourceTree = "<group>"; };
-		9F7B90D8BB9584C195F305F4 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = SyncOurTrip20/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		36C96441CAB5A4C40C30ADBA /* Pods-SyncOurTrip20.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SyncOurTrip20.release.xcconfig"; path = "Target Support Files/Pods-SyncOurTrip20/Pods-SyncOurTrip20.release.xcconfig"; sourceTree = "<group>"; };
+		7CF370BBDEC2695C574F7963 /* libPods-SyncOurTrip20.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SyncOurTrip20.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D416F5D592A763A75A05DB9 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-SyncOurTrip20/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		7F7176DAED130AE3CEDFB247 /* Pods-SyncOurTrip20.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SyncOurTrip20.debug.xcconfig"; path = "Target Support Files/Pods-SyncOurTrip20/Pods-SyncOurTrip20.debug.xcconfig"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = SyncOurTrip20/SplashScreen.storyboard; sourceTree = "<group>"; };
+		AF1CBA9765B7E630BF817397 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = SyncOurTrip20/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
-		E0506F2C05F1A2D46799661D /* Pods-SyncOurTrip20.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SyncOurTrip20.debug.xcconfig"; path = "Target Support Files/Pods-SyncOurTrip20/Pods-SyncOurTrip20.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F11748412D0307B40044C1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = SyncOurTrip20/AppDelegate.swift; sourceTree = "<group>"; };
 		F11748442D0722820044C1D9 /* SyncOurTrip20-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SyncOurTrip20-Bridging-Header.h"; path = "SyncOurTrip20/SyncOurTrip20-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22529FA98FAD6208805EFB26 /* libPods-SyncOurTrip20.a in Frameworks */,
+				8DEEA2529D75A8A4DA15064B /* libPods-SyncOurTrip20.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +53,7 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				9F7B90D8BB9584C195F305F4 /* PrivacyInfo.xcprivacy */,
+				AF1CBA9765B7E630BF817397 /* PrivacyInfo.xcprivacy */,
 			);
 			name = SyncOurTrip20;
 			sourceTree = "<group>";
@@ -62,17 +62,19 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				33476DB5567F4566E4DFDDF1 /* libPods-SyncOurTrip20.a */,
+				7CF370BBDEC2695C574F7963 /* libPods-SyncOurTrip20.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3E157AC78ED96E5027950248 /* ExpoModulesProviders */ = {
+		799A1B61DFCC52CA7183CED1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D9A35E94D787AC5373D4E0BC /* SyncOurTrip20 */,
+				7F7176DAED130AE3CEDFB247 /* Pods-SyncOurTrip20.debug.xcconfig */,
+				36C96441CAB5A4C40C30ADBA /* Pods-SyncOurTrip20.release.xcconfig */,
 			);
-			name = ExpoModulesProviders;
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -89,8 +91,8 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				B026115479F8940673A44A7F /* Pods */,
-				3E157AC78ED96E5027950248 /* ExpoModulesProviders */,
+				799A1B61DFCC52CA7183CED1 /* Pods */,
+				A15CEBFA4FBEE59B1D1E3336 /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -105,14 +107,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B026115479F8940673A44A7F /* Pods */ = {
+		A15CEBFA4FBEE59B1D1E3336 /* ExpoModulesProviders */ = {
 			isa = PBXGroup;
 			children = (
-				E0506F2C05F1A2D46799661D /* Pods-SyncOurTrip20.debug.xcconfig */,
-				5A64B8E6B62D6368D13D353F /* Pods-SyncOurTrip20.release.xcconfig */,
+				DB690B68FF39FCC5AD26FAC0 /* SyncOurTrip20 */,
 			);
-			name = Pods;
-			path = Pods;
+			name = ExpoModulesProviders;
 			sourceTree = "<group>";
 		};
 		BB2F792B24A3F905000567C9 /* Supporting */ = {
@@ -124,10 +124,10 @@
 			path = SyncOurTrip20/Supporting;
 			sourceTree = "<group>";
 		};
-		D9A35E94D787AC5373D4E0BC /* SyncOurTrip20 */ = {
+		DB690B68FF39FCC5AD26FAC0 /* SyncOurTrip20 */ = {
 			isa = PBXGroup;
 			children = (
-				1AAB501EF450B15C94D7A58C /* ExpoModulesProvider.swift */,
+				7D416F5D592A763A75A05DB9 /* ExpoModulesProvider.swift */,
 			);
 			name = SyncOurTrip20;
 			sourceTree = "<group>";
@@ -140,13 +140,13 @@
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SyncOurTrip20" */;
 			buildPhases = (
 				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
-				55CA788A7011AA33FAB210DF /* [Expo] Configure project */,
+				14A8E3BCF2DEEC05D008F49A /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				2D83747C4C81C876AD0C8029 /* [CP] Embed Pods Frameworks */,
+				B4E5871D8D4A3140677F2745 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,7 +196,7 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				68C362223A55FD357F792253 /* PrivacyInfo.xcprivacy in Resources */,
+				099142C2553F5EEC6DA04197 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,25 +240,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2D83747C4C81C876AD0C8029 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SyncOurTrip20/Pods-SyncOurTrip20-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SyncOurTrip20/Pods-SyncOurTrip20-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		55CA788A7011AA33FAB210DF /* [Expo] Configure project */ = {
+		14A8E3BCF2DEEC05D008F49A /* [Expo] Configure project */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -293,6 +275,7 @@
 				"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher/GTMSessionFetcher_Core_Privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleSignIn/GoogleSignIn.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/RCT-Folly/RCT-Folly_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RNCAsyncStorage/RNCAsyncStorage_resources.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/React-Core_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-cxxreact/React-cxxreact_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle",
@@ -310,6 +293,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GTMSessionFetcher_Core_Privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCT-Folly_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RNCAsyncStorage_resources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/React-Core_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/React-cxxreact_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDWebImage.bundle",
@@ -321,6 +305,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SyncOurTrip20/Pods-SyncOurTrip20-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B4E5871D8D4A3140677F2745 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SyncOurTrip20/Pods-SyncOurTrip20-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SyncOurTrip20/Pods-SyncOurTrip20-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -329,7 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */,
-				D5B0800D80028949F81BF20F /* ExpoModulesProvider.swift in Sources */,
+				0F03671C409DD7F92E30BCF5 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +340,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0506F2C05F1A2D46799661D /* Pods-SyncOurTrip20.debug.xcconfig */;
+			baseConfigurationReference = 7F7176DAED130AE3CEDFB247 /* Pods-SyncOurTrip20.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -374,7 +376,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A64B8E6B62D6368D13D353F /* Pods-SyncOurTrip20.release.xcconfig */;
+			baseConfigurationReference = 36C96441CAB5A4C40C30ADBA /* Pods-SyncOurTrip20.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
