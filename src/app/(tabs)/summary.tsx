@@ -1,12 +1,13 @@
 import { Picker } from '@react-native-picker/picker';
+import { useFocusEffect } from '@react-navigation/native';
 import { Image } from 'expo-image';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Alert, Button, Modal, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import DateTimePickerComponent from '../.././components/DateTimePickerComponent';
+import DateTimePickerComponent from '../../components/DateTimePickerComponent';
 
-import ParallaxScrollView from '../.././components/ParallaxScrollView';
-import { ThemedText } from '../.././components/ThemedText';
-import { ThemedView } from '../.././components/ThemedView';
+import ParallaxScrollView from '../../components/ParallaxScrollView';
+import { ThemedText } from '../../components/ThemedText';
+import { ThemedView } from '../../components/ThemedView';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { addDoc, collection, deleteDoc, doc, getDocs, Timestamp, updateDoc } from 'firebase/firestore';
@@ -44,19 +45,27 @@ export default function travel_summary() {
   };
 
   const fetchTrips = async () => {
-  try {
-    const snapshot = await getDocs(collection(db, 'trips', 'EuropeTrip', 'trips'));
-    const docs = snapshot.docs.map(doc => ({ id: doc.id, ...(doc.data() as any) }));
-    docs.sort((a, b) => new Date(a.departureTime).getTime() - new Date(b.departureTime).getTime());
-    setTrips(docs);
-  } catch (err) {
-    console.error('Error fetching trips:', err);
-  }
-};
+    try {
+      const activeTripId = await AsyncStorage.getItem('activeTripId');
+      if (!activeTripId) {
+        setTrips([]);
+        return;
+      }
 
-  useEffect(() => {
+      const snapshot = await getDocs(collection(db, 'trips', activeTripId, 'trips'));
+      const docs = snapshot.docs.map(doc => ({ id: doc.id, ...(doc.data() as any) }));
+      docs.sort((a, b) => new Date(a.departureTime).getTime() - new Date(b.departureTime).getTime());
+      setTrips(docs);
+    } catch (err) {
+      console.error('Error fetching trips:', err);
+    }
+  };
+
+  useFocusEffect(
+  React.useCallback(() => {
     fetchTrips();
-  }, []);
+  }, [])
+);
 
   const handlePress = () => {
     console.log('Add Trip button pressed');
@@ -70,18 +79,25 @@ export default function travel_summary() {
   };
 
   const handleSubmit = async () => {
-    const user = auth.currentUser;
-    if (!user) {
-      Alert.alert("Error", "User not signed in");
+  const user = auth.currentUser;
+  if (!user) {
+    Alert.alert("Error", "User not signed in");
+    return;
+  }
+
+  if (!departureTime || !arrivalTime) {
+    Alert.alert("Missing info", "Please select both departure and arrival times.");
+    return;
+  }
+
+  try {
+    const activeTripId = await AsyncStorage.getItem('activeTripId');
+
+    if (!activeTripId) {
+      Alert.alert("Error", "No active trip selected.");
       return;
     }
 
-    if (!departureTime || !arrivalTime) {
-      Alert.alert("Missing info", "Please select both departure and arrival times.");
-      return;
-    }
-
-    try {
     const tripData = {
       name,
       type,
@@ -93,18 +109,15 @@ export default function travel_summary() {
       createdBy: user.uid
     };
 
-    const tripDocRef = doc(db, 'trips', 'EuropeTrip'); 
-    const tripsCollectionRef = collection(tripDocRef, 'trips'); 
+    const tripDocRef = doc(db, 'trips', activeTripId); 
+    const tripsCollectionRef = collection(tripDocRef, 'trips');
 
     if (currentlyEditingTripId) {
       await updateDoc(doc(tripsCollectionRef, currentlyEditingTripId), tripData);
       console.log('Trip updated:', tripData);
-      await AsyncStorage.setItem('activeTripId', currentlyEditingTripId);
     } else {
       const tripRef = await addDoc(tripsCollectionRef, tripData);
       console.log('Trip created:', tripData);
-
-      await AsyncStorage.setItem('activeTripId', tripRef.id);
 
       await addDoc(collection(tripDocRef, 'members'), {
         uid: user.uid,
@@ -112,14 +125,16 @@ export default function travel_summary() {
         email: user.email
       });
     }
+
     setForm(false);
     setCurrentlyEditingTripId(null);
     fetchTrips();
-    } catch (err) {
-      console.error('Error saving trip:', err);
-      Alert.alert("Error", "Failed to save trip.");
-    }
-  };
+  } catch (err) {
+    console.error('Error saving trip:', err);
+    Alert.alert("Error", "Failed to save trip.");
+  }
+};
+
 
   function addTripFrom() {
     return (
