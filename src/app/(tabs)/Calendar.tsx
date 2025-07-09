@@ -19,15 +19,20 @@ const Cal = () => {
         if (!user) return;
 
         const tripId = await AsyncStorage.getItem('activeTripId');
-        if (!tripId) return;
+        if (!tripId) {
+          setMarkedDates({}); 
+          return;
+        }
 
-        const snapshot = await getDocs(collection(db, 'trips', 'EuropeTrip', 'trips'));
+        const snapshot = await getDocs(collection(db, 'trips', tripId, 'trips'));
 
         const trips = snapshot.docs
         .map(doc => doc.data())
         .filter(trip => trip.departureTime && trip.arrivalTime);
 
-        if (trips.length === 0) return;
+        if (trips.length === 0) {
+          setMarkedDates({});
+        }
 
         const dates = trips.map(trip => ({
           departure: new Date(trip.departureTime),
