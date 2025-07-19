@@ -1,0 +1,3 @@
+[submodule "auth0-react-native-sample"]
+	path = auth0-react-native-sample
+	url = https://github.com/auth0-samples/auth0-react-native-sample
