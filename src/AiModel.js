@@ -1,4 +1,7 @@
 // src\AiModel.js
+import Constants from "expo-constants";
+const { googleGeminiApiKey } = Constants.expoConfig.extra;
+
 const {
     GoogleGenerativeAI,
     HarmCategory,
@@ -6,7 +9,8 @@ const {
 } = require("@google/generative-ai");
 
 const apiKey = process.env.EXPO_PUBLIC_GOOGLE_GEMINI_API_KEY;
-const genAI = new GoogleGenerativeAI(apiKey);
+// const genAI = new GoogleGenerativeAI(apiKey);
+const genAI = new GoogleGenerativeAI(googleGeminiApiKey);
 
 const model = genAI.getGenerativeModel({
     model: "gemini-2.5-flash",

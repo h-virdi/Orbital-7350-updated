@@ -16,13 +16,13 @@ export default function ReviewTrip() {
   const [selectedOption, setSelectedOption] = useState();
   const { tripData, setTripData } = useContext(CreateTripContext);
 
-  useEffect(() => {
-    navigation.setOptions({
-      headerShown: true,
-      headerTransparent: true,
-      headerTitle: ""
-    })
-  }, [])
+  // useEffect(() => {
+  //   navigation.setOptions({
+  //     headerShown: true,
+  //     headerTransparent: true,
+  //     headerTitle: ""
+  //   })
+  // }, [])
 
   return (
     <View style={{

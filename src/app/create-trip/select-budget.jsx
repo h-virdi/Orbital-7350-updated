@@ -15,13 +15,13 @@ export default function SelectBudget() {
     const { tripData, setTripData } = useContext(CreateTripContext);
     const router = useRouter();
 
-    useEffect(() => {
-        navigation.setOptions({
-            headerShown: true,
-            headerTransparent: true,
-            headerTitle: ""
-        })
-    }, []);
+    // useEffect(() => {
+    //     navigation.setOptions({
+    //         headerShown: true,
+    //         headerTransparent: true,
+    //         headerTitle: ""
+    //     })
+    // }, []);
 
     useEffect(() => {
         selectedOption && setTripData({

@@ -27,7 +27,7 @@ export default function GenerateTrip() {
         .replace('{totalDay}', tripData?.totalNoOfDays)
         .replace('{totalNight}', tripData?.totalNoOfDays - 1)
         .replace('{traveller}', tripData?.traveller?.title)
-        .replace('{budget} ', tripData?.budget)
+        .replace('{budget}', tripData?.budget)
         .replace('{totalDay}', tripData?.totalNoOfDays)
         .replace('{totalNight}', tripData?.totalNoOfDays - 1);
 
@@ -35,8 +35,13 @@ export default function GenerateTrip() {
 
         const result = await chatSession.sendMessage(FINAL_PROMPT);
         
-        console.log(result.response.text());
-        const tripResp= JSON.parse(result.response.text());
+        // console.log(result.response.text());
+        // const tripResp= JSON.parse(result.response.text());
+        const responseText = await result.response.text();
+console.log("🧠 AI Response Text:", responseText);
+
+const tripResp = JSON.parse(responseText);
+
         setLoading(false);
         
         const docId = (Date.now()).toString();

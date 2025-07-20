@@ -17,13 +17,13 @@ export default function SelectDates() {
   const router = useRouter();
   
 
-  useEffect(() => {
-        navigation.setOptions({
-            headerShown: true,
-            headerTransparent: true,
-            headerTitle: ""
-        })
-    }, [])
+  // useEffect(() => {
+  //       navigation.setOptions({
+  //           headerShown: true,
+  //           headerTransparent: true,
+  //           headerTitle: ""
+  //       })
+  //   }, [])
 
     const onDateChange = (date, type) => {
         console.log(date, type);

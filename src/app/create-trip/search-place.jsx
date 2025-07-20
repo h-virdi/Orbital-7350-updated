@@ -1,11 +1,12 @@
 // app/create-trip/search-place.jsx
 import { Colors } from '@/constants/Colors';
+import Constants from 'expo-constants';
 import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
-import { useContext, useEffect, useRef, useState } from 'react';
-import { StyleSheet, Text, View, Alert, TouchableOpacity } from 'react-native';
-import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-import { CreateTripContext } from './../../context/CreateTripContext';
+import { useContext, useEffect, useRef } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import GooglePlacesTextInput from 'react-native-google-places-textinput';
+import { CreateTripContext } from './../../context/CreateTripContext';
+import { ScrollView } from 'react-native';
 
 export default function SearchPlace() {
   const navigation = useNavigation();
@@ -14,13 +15,13 @@ export default function SearchPlace() {
   const { tripData, setTripData } = useContext(CreateTripContext);
   const { editDocId, trip } = useLocalSearchParams();
 
-  useEffect(() => {
-    navigation.setOptions({
-      headerShown: true,
-      headerTransparent: true,
-      headerTitle: 'Search',
-    });
-  }, []);
+  // useEffect(() => {
+  //   navigation.setOptions({
+  //     headerShown: false,
+  //     headerTransparent: true,
+  //     headerTitle: 'Search',
+  //   });
+  // }, []);
 
   useEffect(() => {
   if (trip) {
@@ -58,10 +59,10 @@ export default function SearchPlace() {
 
 
   return (
-    <View style={styles.container}>
+     <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="handled">
       <Text style={styles.title}>Search for a Location</Text>
 
-      <GooglePlacesTextInput
+      {/* <GooglePlacesTextInput
         ref={inputRef}
         //REMOVE/HIDE API
         apiKey={process.env.EXPO_PUBLIC_GOOGLE_MAP_KEY} // Replace with @env if needed
@@ -84,8 +85,31 @@ export default function SearchPlace() {
           suggestionItem: styles.suggestionItem,
         }}
         onError={(error) => console.warn('❌ API error:', error)}
-      />
-    </View>
+      /> */}
+      <GooglePlacesTextInput
+  ref={inputRef}
+  apiKey={Constants.expoConfig.extra.googleMapsApiKey}
+  fetchDetails={true}
+  detailsFields={[
+    'location',
+    'formattedAddress',
+    'photos',
+    'googleMapsUri',
+    'displayName',
+  ]}
+  onPlaceSelect={handlePlaceSelect}
+  showClearButton={true}
+  showLoadingIndicator={true}
+  debounceDelay={300}
+  minCharsToFetch={2}
+  style={{
+    input: styles.input,
+    suggestionsContainer: styles.suggestionsContainer,
+    suggestionItem: styles.suggestionItem,
+  }}
+  onError={(error) => console.warn('❌ API error:', error)}
+/>
+    </ScrollView>
   );
 }
 
@@ -94,7 +118,7 @@ const styles = StyleSheet.create({
     padding: 25,
     paddingTop: 100,
     backgroundColor: Colors.WHITE,
-    height: '100%',
+    flexGrow: 1,
   },
   title: {
     fontSize: 22,
