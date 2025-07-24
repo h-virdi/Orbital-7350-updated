@@ -1,5 +1,5 @@
+//src\app\mocks\theme.ts
 import { Platform } from 'react-native';
-
 export const themeColor = '#00AAAF';
 export const lightThemeColor = '#f2f7f7';
 

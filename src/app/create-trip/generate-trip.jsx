@@ -79,9 +79,9 @@ const tripResp = JSON.parse(responseText);
       <Image source= {require('./../../../assets/images/plane.gif')}
       style={{
         width:'100%',
-        height:200,
-        objectFit:'contain'
-      }} />
+        height:200, }}
+        resizeMode='contain'
+       />
 
       <Text style={{
         fontFamily:'outfit',

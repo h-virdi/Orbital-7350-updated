@@ -1,9 +1,9 @@
 // app/create-trip/select-traveller.jsx
+import { Colors } from '@/constants/Colors';
 import { useNavigation, useRouter } from 'expo-router';
 import { useContext, useEffect, useState } from 'react';
-import { FlatList, ScrollView, Text, TouchableOpacity, View, Alert } from 'react-native';
-import { Colors } from '@/constants/Colors';
-import { ToastAndroid } from 'react-native';
+import { Alert, FlatList, Text, ToastAndroid, TouchableOpacity, View } from 'react-native';
+
 
 import OptionCard from '../../components/CreateTrip/OptionCard';
 import { SelectTravelsList } from './../../../constants/Options';
@@ -39,14 +39,12 @@ export default function SelectTraveller() {
   };
 
   return (
-    <ScrollView
+    <View
       style={{
+        flex: 1,
         padding: 25,
         paddingTop: 75,
         backgroundColor: Colors.WHITE,
-      }}
-      contentContainerStyle={{
-        paddingBottom: 60,
       }}
     >
       <Text
@@ -86,29 +84,31 @@ export default function SelectTraveller() {
               <OptionCard option={item} selectedOption={selectedTraveller} />
             </TouchableOpacity>
           )}
+          contentContainerStyle={{ paddingBottom: 60 }}
+          ListFooterComponent={
+            <TouchableOpacity
+              onPress={handleContinue}
+              style={{
+                padding: 15,
+                backgroundColor: Colors.PRIMARY,
+                borderRadius: 15,
+                marginTop: 20,
+              }}
+            >
+              <Text
+                style={{
+                  textAlign: 'center',
+                  color: Colors.WHITE,
+                  fontFamily: 'outfit-medium',
+                  fontSize: 20,
+                }}
+              >
+                Continue
+              </Text>
+            </TouchableOpacity>
+          }
         />
       </View>
-
-      <TouchableOpacity
-        onPress={handleContinue}
-        style={{
-          padding: 15,
-          backgroundColor: Colors.PRIMARY,
-          borderRadius: 15,
-          marginTop: 20,
-        }}
-      >
-        <Text
-          style={{
-            textAlign: 'center',
-            color: Colors.WHITE,
-            fontFamily: 'outfit-medium',
-            fontSize: 20,
-          }}
-        >
-          Continue
-        </Text>
-      </TouchableOpacity>
-    </ScrollView>
+    </View>
   );
 }

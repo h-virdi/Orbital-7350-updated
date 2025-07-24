@@ -1,4 +1,5 @@
 //src\app\create-trip\review-trip.jsx
+//import { Ionicons, FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
