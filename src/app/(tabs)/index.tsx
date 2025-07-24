@@ -1,3 +1,4 @@
+//src\app\(tabs)\index.tsx
 import { GoogleAuthProvider, signInWithCredential } from 'firebase/auth';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import React, { useState } from 'react';
